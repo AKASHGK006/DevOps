@@ -7,6 +7,23 @@
     "start": "node server.js",
     "test": "jest --coverage"
   },
+  "jest": {
+  "coverageReporters": [
+    "text",
+    "lcov",
+    "cobertura"
+  ],
+  "reporters": [
+    "default",
+    [
+      "jest-junit",
+      {
+        "outputDirectory": ".",
+        "outputName": "junit.xml"
+      }
+    ]
+  ]
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
